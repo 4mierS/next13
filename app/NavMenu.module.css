@@ -12,16 +12,28 @@
     list-style: none;
     display: flex;
     margin-right: 1rem;
-}
 
-.links li{
-    height: 60px;
-    display: flex;
-    align-items: center;
-    padding: 0.25rem;
-}
+    & li{
+        height: 60px;
+        display: flex;
+        align-items: center;
+        padding: 0.25rem;
 
-.links a{
-    color: white;
-    text-decoration: none;
+        & :nth-last-child(2){
+           padding-right: 2rem;
+        }
+    }
+
+    & a{
+        color: white;
+        text-decoration: none;
+        
+        &:hover{
+            color: #ccc;
+        }
+    }
+
+    & img {
+        border-radius: 50%;
+    }
 }
