@@ -3,7 +3,6 @@ import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 import { prisma } from '@/lib/prisma';
 import UserCard from '@/components/UserCard/UserCard';
 import styles from '../page.module.css';
-import { redirect } from 'next/navigation';
 
 export default async function Users() {
   const session = await getServerSession(authOptions);
