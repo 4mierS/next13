@@ -12,7 +12,9 @@ export default async function Dashboard() {
         redirect('/api/auth/signin');
     }
 
-    const currentUserEmail = session?.user?.name!;
+    // #1 - Get the current user's email
+    // #FIXME
+    const currentUserEmail = session?.user?.email!;
     const user = await prisma.user.findUnique({
         where: { email: currentUserEmail },
     });
